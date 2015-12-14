@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Satoshi Bot</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+	google.load("jquery", "1.7");
+  </script>
+  
+  
+  <h1>Bankroll <textarea id="Bankroll"></textarea> </h1>
+  <h2>Earnings <textarea id="Earnings"></textarea>  Rollcount: <textarea id="Rollcount"></textarea> MaxLossStreak: <textarea id="MaxLossStreakArea"></textarea></h2>
+  <p>Secret key: <input type="text" id="SecretBox" size="50" value=""><input type="button" value="GetBalance" onclick="getBalance();"></p>
+  <p>Bet amount: <input type="text" id="BetBox" size="20" value="100"><input type="button" value="Place Single Bet" onclick="placeBet();"></p>
+  <p>Roll below: <input type="text" id="RollBelow" size="10" value="32000"> <input type="button" value="Calculate Roll Below" onclick="calculateRollBelow();"> Multiplier: <input type="text" id="Multiplier" size="10" value="2"><input type="button" value="Calculate Multiplier" onclick="calculateMultiplier();">Probability: <input type="text" id="Probability" size="10" value="48.82"><input type="button" value="Calculate Probability" onclick="calculateProbability();"></p>
+  <p>Max Loss Streak: <input type="text" id="MaxLossStreak" size="10" value="10"> Balance for stop: <input type="text" id="BalanceForStop" size="20" value="100000000"><input type="button" value="Run Bot" onclick="runBot();"><input type="button" value="Stop Bot" onclick="stopBot();"></p>
+  
+  <script type="text/javascript" src="runBot.js"></script>
+  
+  <ul>
+  </ul>
+</body>
+</html>
